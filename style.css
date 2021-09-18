@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #b32d29;
+}
+
+header div{
+    height:max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+header div .img{
+    position:absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    
+    background-image: url("./images/headerMobile2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.filter{
+    position:absolute;
+    width: 100vw;
+    height: 100%;
+    background-color:black;
+    opacity: 10%;
+    z-index: 2;
+    animation: filter 1s ease-in forwards;
+}
+
+#logo{
+    background-size: cover;
+    position:absolute;
+    background-size: 100%;
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    background-image: url("./images/logoMobile.png");
+    background-position: center;
+    z-index: 3;
+}
+
+.animationMovement{
+    animation: movement 5s ease infinite;
+}
+
+.animationEnter{
+    animation: fadeIn 1s ease-in forwards 1s;
+}
+
+#info div h1{
+    
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+
+section div p{
+    text-align: justify;
+    color: white;
+    padding-inline: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+section div{
+    background-color: black;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+section{
+    width: 100%;
+}
+
+#info div{
+    padding-top: 5rem;
+}
+
+#mediaContent div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section div iframe{
+    width: 90%;
+    height: 20rem;
+    margin-top: 2rem;
+}
+
+#contact{
+    background-color:#b32d29;
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;      
+    margin-bottom: 5rem; 
+}
+
+h3{
+    font-weight: 400;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    font-size: 5rem;
+}
+
+#contact h2{
+    margin-top: 4rem;
+}
+
+.fa {
+    padding: 1.4rem;
+    width: 3rem;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 5px 2px;
+    text-align: center;
+    display: inline-block;
+}
+  
+.fa:hover {
+      opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube-play {
+    background: #bb0000;
+    color: white;
+}
+  
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+#social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin:auto;
+    flex-direction: column;
+}
+
+#socialMedia div{
+    padding-top: 5rem;
+}
+
+#downloads div{
+    background-color:#b32d29;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#downloads div h3{
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    font-size: 2rem;
+}
+
+#downloads div a{
+    background: white;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    width: 8rem;
+    color:#b32d29;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#downloads div a:hover{
+    opacity: 80%;
+}
+
+@media screen and (min-width: 40rem){
+    #logo{
+        background-image: url("./images/logo.png");
+    }
+    header div .img{
+        background-image: url("./images/headerMobile.jpg");
+    }
+}
+
+@media screen and (min-width: 60rem){
+    header div .img{
+        background-image: url("./images/header.jpg");
+    }
+    section div p{
+        padding-inline: 15rem;
+    }
+    section div iframe{
+        width: 45%;
+        height: 20rem;
+        padding-inline: 2rem;
+        margin-top: 0;
+    }
+    #mediaContent div{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #social{
+        flex-direction: row;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        width: 78%;
+        height: 78%;
+    }
+    100%{
+        opacity: 1;
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@keyframes filter{
+    0%{
+        opacity: 100%;
+        background-color:#b32d29;
+    }
+    100%{
+        background-color: #c50000;
+        opacity: 50%;
+    }
+}
+
+
+@keyframes movement{
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(0.5rem);
+    }
+    100%{
+        transform: translateY(0rem);;
+    }
+}
